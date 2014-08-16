@@ -1,0 +1,861 @@
+fileFormatVersion: 2
+guid: 26dd81c23aaeb5a4c8e10789af7150b0
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Arm_L
+    100004: Arm_R
+    100006: Armature
+    100008: Cock
+    100010: Cube
+    100012: ForeArm_L
+    100014: ForeArm_R
+    100016: Gun
+    100018: Hand_L
+    100020: Hand_R
+    100022: Index_L
+    100024: Index_R
+    100026: IndexTip_L
+    100028: IndexTip_R
+    100030: Mag
+    100032: Middle_L
+    100034: Middle_R
+    100036: MiddleTip_L
+    100038: MiddleTip_R
+    100040: Pinky_L
+    100042: Pinky_R
+    100044: PinkyTip_L
+    100046: PinkyTip_R
+    100048: Ring_L
+    100050: Ring_R
+    100052: RingTip_L
+    100054: RingTip_R
+    100056: Thumb_L
+    100058: Thumb_R
+    100060: ThumbTip_L
+    100062: ThumbTip_R
+    400000: //RootNode
+    400002: Arm_L
+    400004: Arm_R
+    400006: Armature
+    400008: Cock
+    400010: Cube
+    400012: ForeArm_L
+    400014: ForeArm_R
+    400016: Gun
+    400018: Hand_L
+    400020: Hand_R
+    400022: Index_L
+    400024: Index_R
+    400026: IndexTip_L
+    400028: IndexTip_R
+    400030: Mag
+    400032: Middle_L
+    400034: Middle_R
+    400036: MiddleTip_L
+    400038: MiddleTip_R
+    400040: Pinky_L
+    400042: Pinky_R
+    400044: PinkyTip_L
+    400046: PinkyTip_R
+    400048: Ring_L
+    400050: Ring_R
+    400052: RingTip_L
+    400054: RingTip_R
+    400056: Thumb_L
+    400058: Thumb_R
+    400060: ThumbTip_L
+    400062: ThumbTip_R
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Cube
+    7400000: Default Take
+    7400002: N4A1_Still
+    7400004: N4A1_Aim
+    7400006: N4A1_AimFire
+    7400008: N4A1_CheckMag
+    7400010: N4A1_Reload
+    7400012: N4A1_Run
+    7400014: N4A1_Shoot
+    7400016: N4A1_Walk
+    7400018: N4A1_RunTrans
+    7400020: N4A1_Grab
+    7400022: N4A1_Pickup
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: Cube
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: N4A1_CheckMag
+      takeName: N4A1_CheckMag
+      firstFrame: -1
+      lastFrame: 32
+      wrapMode: 8
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Arm_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Index_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Index_L/IndexTip_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Middle_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Middle_L/MiddleTip_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Pinky_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Pinky_L/PinkyTip_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Ring_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Ring_L/RingTip_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Thumb_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Thumb_L/ThumbTip_L
+        weight: 1
+      - path: Armature/Arm_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Index_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Index_R/IndexTip_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Middle_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Middle_R/MiddleTip_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Pinky_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Pinky_R/PinkyTip_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Ring_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Ring_R/RingTip_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Thumb_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Thumb_R/ThumbTip_R
+        weight: 1
+      - path: Armature/Cock
+        weight: 1
+      - path: Armature/Gun
+        weight: 1
+      - path: Armature/Gun/Mag
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: N4A1_Reload
+      takeName: N4A1_Reload
+      firstFrame: -1
+      lastFrame: 79
+      wrapMode: 1
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Arm_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Index_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Index_L/IndexTip_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Middle_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Middle_L/MiddleTip_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Pinky_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Pinky_L/PinkyTip_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Ring_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Ring_L/RingTip_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Thumb_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Thumb_L/ThumbTip_L
+        weight: 1
+      - path: Armature/Arm_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Index_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Index_R/IndexTip_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Middle_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Middle_R/MiddleTip_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Pinky_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Pinky_R/PinkyTip_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Ring_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Ring_R/RingTip_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Thumb_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Thumb_R/ThumbTip_R
+        weight: 1
+      - path: Armature/Cock
+        weight: 1
+      - path: Armature/Gun
+        weight: 1
+      - path: Armature/Gun/Mag
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: N4A1_Run
+      takeName: N4A1_Run
+      firstFrame: -1
+      lastFrame: 13
+      wrapMode: 4
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Arm_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Index_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Index_L/IndexTip_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Middle_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Middle_L/MiddleTip_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Pinky_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Pinky_L/PinkyTip_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Ring_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Ring_L/RingTip_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Thumb_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Thumb_L/ThumbTip_L
+        weight: 1
+      - path: Armature/Arm_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Index_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Index_R/IndexTip_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Middle_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Middle_R/MiddleTip_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Pinky_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Pinky_R/PinkyTip_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Ring_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Ring_R/RingTip_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Thumb_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Thumb_R/ThumbTip_R
+        weight: 1
+      - path: Armature/Cock
+        weight: 1
+      - path: Armature/Gun
+        weight: 1
+      - path: Armature/Gun/Mag
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: N4A1_Shoot
+      takeName: N4A1_Shoot
+      firstFrame: -1
+      lastFrame: 3
+      wrapMode: 1
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Arm_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Index_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Index_L/IndexTip_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Middle_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Middle_L/MiddleTip_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Pinky_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Pinky_L/PinkyTip_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Ring_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Ring_L/RingTip_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Thumb_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Thumb_L/ThumbTip_L
+        weight: 1
+      - path: Armature/Arm_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Index_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Index_R/IndexTip_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Middle_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Middle_R/MiddleTip_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Pinky_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Pinky_R/PinkyTip_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Ring_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Ring_R/RingTip_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Thumb_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Thumb_R/ThumbTip_R
+        weight: 1
+      - path: Armature/Cock
+        weight: 1
+      - path: Armature/Gun
+        weight: 1
+      - path: Armature/Gun/Mag
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: N4A1_Still
+      takeName: N4A1_Still
+      firstFrame: -1
+      lastFrame: 19
+      wrapMode: 4
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Arm_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Index_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Index_L/IndexTip_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Middle_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Middle_L/MiddleTip_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Pinky_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Pinky_L/PinkyTip_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Ring_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Ring_L/RingTip_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Thumb_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Thumb_L/ThumbTip_L
+        weight: 1
+      - path: Armature/Arm_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Index_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Index_R/IndexTip_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Middle_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Middle_R/MiddleTip_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Pinky_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Pinky_R/PinkyTip_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Ring_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Ring_R/RingTip_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Thumb_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Thumb_R/ThumbTip_R
+        weight: 1
+      - path: Armature/Cock
+        weight: 1
+      - path: Armature/Gun
+        weight: 1
+      - path: Armature/Gun/Mag
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: N4A1_Walk
+      takeName: N4A1_Walk
+      firstFrame: -1
+      lastFrame: 8
+      wrapMode: 4
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Arm_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Index_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Index_L/IndexTip_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Middle_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Middle_L/MiddleTip_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Pinky_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Pinky_L/PinkyTip_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Ring_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Ring_L/RingTip_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Thumb_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Thumb_L/ThumbTip_L
+        weight: 1
+      - path: Armature/Arm_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Index_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Index_R/IndexTip_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Middle_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Middle_R/MiddleTip_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Pinky_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Pinky_R/PinkyTip_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Ring_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Ring_R/RingTip_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Thumb_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Thumb_R/ThumbTip_R
+        weight: 1
+      - path: Armature/Cock
+        weight: 1
+      - path: Armature/Gun
+        weight: 1
+      - path: Armature/Gun/Mag
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: N4A1_Grab
+      takeName: N4A1_Grab
+      firstFrame: -1
+      lastFrame: 19
+      wrapMode: 4
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Arm_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Index_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Index_L/IndexTip_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Middle_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Middle_L/MiddleTip_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Pinky_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Pinky_L/PinkyTip_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Ring_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Ring_L/RingTip_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Thumb_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Thumb_L/ThumbTip_L
+        weight: 1
+      - path: Armature/Arm_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Index_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Index_R/IndexTip_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Middle_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Middle_R/MiddleTip_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Pinky_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Pinky_R/PinkyTip_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Ring_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Ring_R/RingTip_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Thumb_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Thumb_R/ThumbTip_R
+        weight: 1
+      - path: Armature/Cock
+        weight: 1
+      - path: Armature/Gun
+        weight: 1
+      - path: Armature/Gun/Mag
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: N4A1_Pickup
+      takeName: N4A1_Pickup
+      firstFrame: -1
+      lastFrame: 24
+      wrapMode: 1
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Arm_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Index_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Index_L/IndexTip_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Middle_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Middle_L/MiddleTip_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Pinky_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Pinky_L/PinkyTip_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Ring_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Ring_L/RingTip_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Thumb_L
+        weight: 1
+      - path: Armature/Arm_L/ForeArm_L/Hand_L/Thumb_L/ThumbTip_L
+        weight: 1
+      - path: Armature/Arm_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Index_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Index_R/IndexTip_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Middle_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Middle_R/MiddleTip_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Pinky_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Pinky_R/PinkyTip_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Ring_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Ring_R/RingTip_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Thumb_R
+        weight: 1
+      - path: Armature/Arm_R/ForeArm_R/Hand_R/Thumb_R/ThumbTip_R
+        weight: 1
+      - path: Armature/Cock
+        weight: 1
+      - path: Armature/Gun
+        weight: 1
+      - path: Armature/Gun/Mag
+        weight: 1
+      - path: Cube
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .400000006
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 1
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 0
+  userData: 
