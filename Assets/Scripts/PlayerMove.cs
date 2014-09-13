@@ -38,7 +38,7 @@ public class PlayerMove : MonoBehaviour
 		else isCrouching = false;
 		chMotor.movement.maxForwardSpeed = speed; // set max speed
 		var lastHeight = ch.height; // crouch/stand up smoothly 
-		ch.height = Mathf.Lerp(ch.height, h, 5*Time.deltaTime);
+		ch.height = Mathf.Lerp(ch.height, h, 5 * Time.deltaTime);
 
 		//tr.position.y += (ch.height-lastHeight)/2; // fix vertical position
 		tr.position = new Vector3(tr.position.x, tr.position.y + ((ch.height-lastHeight)/2), tr.position.z);

@@ -5,7 +5,7 @@ public class SCP106 : OnShot
 {
 	public Transform player, target, nodes;
 	private Transform torso, armL, armR, neck, head, node = null;
-	public AnimationClip still, walk, eat, pocket, grab, hit, enterWall, exitWall, walkHands;
+	private AnimationClip still, walk, eat, pocket, grab, hit, enterWall, exitWall, walkHands;
 
 	public float moveSpeed = 2f;
 
@@ -19,6 +19,16 @@ public class SCP106 : OnShot
 
 	void Start()
 	{
+		still = animation.GetClip("106_Standing");
+		walk = animation.GetClip("106_Walk");
+		eat = animation.GetClip("106_Eat");
+		pocket = animation.GetClip("106_PocketDimDrag");
+		grab = animation.GetClip("106_grab");
+		hit = animation.GetClip("106_hit");
+		enterWall = animation.GetClip("106_EnterWall1");
+		exitWall = animation.GetClip("106_ExitWall1");
+		walkHands = animation.GetClip("106_Walk2");
+
 		head = transform.Find("Armature/Neck/Head");
 		torso = transform.Find("Armature/Torso");
 		armL = transform.Find("Armature/Shoulder_L");
@@ -77,6 +87,7 @@ public class SCP106 : OnShot
 				animation.CrossFade(hit.name);
 				player.GetComponent<CharacterMotor>().enabled = false;
 				player.GetComponent<Player>().lockMouseMovement = true;
+				player.GetComponent<Player>().enabled = false;
 				player.position = transform.FindChild("Strangle").transform.position;
 
 				Transform cam = player.FindChild("Camera").FindChild("Main Camera").transform;
@@ -97,14 +108,15 @@ public class SCP106 : OnShot
 
 		if(retreat && !node)
 		{
-			foreach(Transform n in nodes.GetComponent<Nodes>().nodes)
+			foreach(GameObject na in nodes.GetComponent<Nodes>().nodes)
 			{
-				if(node == null) node = n;
-				else
+				Transform n = na.transform;
+				if(node == null && n.gameObject.activeSelf) node = n;
+				else if(node != null)
 				{
 					float distance = (transform.position - n.position).magnitude;
 					float distancePrev = (transform.position - node.position).magnitude;
-					if(distance < distancePrev) node = n;
+					if(distance < distancePrev && n.gameObject.activeSelf) node = n;
 				}
 			}
 		}
@@ -132,7 +144,8 @@ public class SCP106 : OnShot
 			{
 				hidingStage = 2;
 				isHiding = true;
-				transform.position = new Vector3(node.parent.FindChild("Center").position.x, transform.position.y, node.parent.FindChild("Center").position.z);
+				Vector3 center = node.parent.transform.renderer.bounds.center;
+				transform.position = new Vector3(center.x, transform.position.y, center.z);
 				animation.Stop(enterWall.name);
 				animation.CrossFade(still.name);
 				previousNode = findNode(node);
@@ -143,8 +156,9 @@ public class SCP106 : OnShot
 		if(isHiding && Random.Range(0, 10) == 3 && hidingStage > 0 && hidingStage != 4 && hidingStage != 3)
 		{
 			hidingStage = 4;
-			int rand = RandomRangeExcept(0, nodes.GetComponent<Nodes>().nodes.Length, previousNode);
-			Transform pos = nodes.GetComponent<Nodes>().nodes[rand];
+			int rand = RandomRangeExcept(0, nodes.GetComponent<Nodes>().nodes.Count, previousNode);
+			GameObject posA = (GameObject)nodes.GetComponent<Nodes>().nodes[rand];
+			Transform pos = posA.transform;
 
 			transform.position = new Vector3(pos.position.x, transform.position.y, pos.position.z);
 			Vector3 finalVec = pos.parent.transform.position - transform.position;
@@ -179,20 +193,30 @@ public class SCP106 : OnShot
 
 	private int RandomRangeExcept(int min, int max, int except) 
 	{
+		GameObject obj;
 		int number;
+		int maxNodes = nodes.GetComponent<Nodes>().nodes.Count;
+		int count = 0;
 		do
 		{
+			count++;
 			number = Random.Range(min, max);
+			obj = (GameObject)nodes.GetComponent<Nodes>().nodes[number];
+			if(count > maxNodes)
+			{
+				number = -1;
+				break;
+			}
 		}
-		while(number == except);
+		while(number == except || !obj.activeSelf);
 		return number;
 	}
 
 	private int findNode(Transform trans)
 	{
-		for(int i = 0; i < nodes.GetComponent<Nodes>().nodes.Length; i++)
+		for(int i = 0; i < nodes.GetComponent<Nodes>().nodes.Count; i++)
 		{
-			Transform n = nodes.GetComponent<Nodes>().nodes[i];
+			Transform n = ((GameObject)nodes.GetComponent<Nodes>().nodes[i]).transform;
 			if(n.position.x == trans.position.x && n.position.y == trans.position.y && n.position.z == trans.position.z) return i;
 		}
 		return -1;

@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Weapon : MonoBehaviour
 {
-	public AnimationClip still, walk, run, fire, checkMag, reload, grab, pickup;
+	private AnimationClip still, walk, run, fire, checkMag, reload, grab, pickup;
 
 	public Light muzzleLight;
 
@@ -32,17 +32,33 @@ public class Weapon : MonoBehaviour
 
 	public GameObject spark, mag;
 
-	public GUITexture crosshair;
-	public GUIText pickupText;
+	private GUITexture crosshair;
+	private GUIText pickupText;
 
 	private int oldBullets = 0;
+	
+	private Vector3 lastPos;
 
 	void Start()
 	{
+		still = animation.GetClip("N4A1_Still");
+		walk = animation.GetClip("N4A1_Walk");
+		run = animation.GetClip("N4A1_Run");
+		fire = animation.GetClip("N4A1_Shoot");
+		checkMag = animation.GetClip("N4A1_CheckMag");
+		reload = animation.GetClip("N4A1_Reload");
+		grab = animation.GetClip("N4A1_Grab");
+		pickup = animation.GetClip("N4A1_Pickup");
+
 		player = playerObj.GetComponent<Player>();
 		ch = playerObj.GetComponent<CharacterController>();
 		bullets = startBullets;
 		mags = startMags;
+
+		crosshair = GameObject.Find("HUD/MTF/Reticle").guiTexture;
+		pickupText = GameObject.Find("HUD/MTF/ItemPickup").guiText;
+
+		lastPos = playerObj.transform.position;
 	}
 
 	public void WeaponUpdate()
@@ -64,10 +80,10 @@ public class Weapon : MonoBehaviour
 		}
 		else if(itemInt != 2)
 		{
-			pickupText.text = "";
+			if(pickupText) pickupText.text = "";
 			itemInt = 0;
 		}
-		if(!animation.IsPlaying(pickup.name) && itemInt == 2) itemInt = 0;
+		if(pickup && !animation.IsPlaying(pickup.name) && itemInt == 2) itemInt = 0;
 
 		if(!Input.GetMouseButton(1) && !Input.GetMouseButton(0) && aimInt == 0 && reloadInt == 0 && checkMagInt == 0) canRun = true;
 
@@ -76,6 +92,7 @@ public class Weapon : MonoBehaviour
 			transform.position = Vector3.Lerp(transform.position, aimPos.position, Time.deltaTime * aimSpeed);
 			animation[still.name].time = 0f;
 			animation[still.name].speed = 0f;
+			animation.CrossFade(still.name);
 			canRun = false;
 			crosshair.enabled = false;
 		}
@@ -159,12 +176,20 @@ public class Weapon : MonoBehaviour
 
 	public void FixedWeaponUpdate()
 	{
-		if(ch.isGrounded && player.isMoving() && itemInt == 0 && !Input.GetMouseButton(1) && checkMagInt == 0 && reloadInt == 0 && shootInt == 0)
+		if(ch.isGrounded && isMoving() && itemInt == 0 && !Input.GetMouseButton(1) && checkMagInt == 0 && reloadInt == 0 && shootInt == 0)
 		{
 			animation.Stop(still.name);
 			if(Input.GetButton("Run") && !playerObj.GetComponent<PlayerMove>().isCrouching) animation.Play(run.name);
 			else animation.Play(walk.name);
 		}
+	}
+
+	private bool isMoving()
+	{
+		Vector3 displacement = playerObj.transform.position - lastPos;
+		lastPos = playerObj.transform.position;
+		displacement = new Vector3(displacement.x, 0, displacement.z);
+		return displacement.magnitude > 0.001;
 	}
 
 	private void shoot()
@@ -182,11 +207,16 @@ public class Weapon : MonoBehaviour
 		RaycastHit hit;
 		if(Physics.Raycast(Camera.main.ViewportPointToRay(new Vector3(0.5f + randX, 0.5f + randY, 0f)), out hit, range))
 		{
-			if(hit.rigidbody && hit.transform.GetComponent<OnShot>()) hit.transform.GetComponent<OnShot>().OnShoot(damage, hit);
-			else
+			if(hit.rigidbody && hit.transform.GetComponent<OnShot>())
+			{
+				hit.transform.GetComponent<OnShot>().OnShoot(damage, hit);
+				if(hit.transform.GetComponent<OnShot>().knockback) hit.rigidbody.AddForceAtPosition(-2000f * transform.forward, hit.point);
+			}
+			if(!hit.transform.GetComponent<OnShot>() || hit.transform.GetComponent<OnShot>().defaultParticle)
 			{
 				GameObject obj = (GameObject)Instantiate(spark, hit.point, Quaternion.identity);
-				if(hit.transform.renderer) obj.transform.FindChild("Main").renderer.material.SetColor("_TintColor", hit.transform.renderer.material.color);
+				if(hit.transform.renderer && hit.transform.renderer.material.HasProperty("_Color")) obj.transform.FindChild("Main").renderer.material.SetColor("_TintColor", hit.transform.renderer.material.color);
+				else if(hit.transform.renderer && hit.transform.renderer.material.HasProperty("_SpecColor")) obj.transform.FindChild("Main").renderer.material.SetColor("_TintColor", hit.transform.renderer.material.GetColor("_SpecColor"));
 				else obj.transform.FindChild("Main").renderer.material.SetColor("_TintColor", new Color(0.8f, 0.3f, 0f, 1f));
 			}
 		}

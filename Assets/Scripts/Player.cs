@@ -8,14 +8,11 @@ public class Player : MonoBehaviour
 	//private MouseLook yLook, xLook;
 	public MouseLook look;
 	public Transform weapon;
-	
+
 	private Vector3 lastPos;
 
-	// Use this for initialization
 	void Start()
 	{
-		//xLook = GetComponent<MouseLook>();
-		//yLook = transform.FindChild("Main Camera").GetComponent<MouseLook>();
 		lastPos = transform.position;
 	}
 	
@@ -31,19 +28,19 @@ public class Player : MonoBehaviour
 		{
 			look.enabled = true;
 			look.enabled = true;
-			weapon.GetComponent<Weapon>().WeaponUpdate();
+			if(weapon.GetComponent<Weapon>()) weapon.GetComponent<Weapon>().WeaponUpdate();
 		}
 	}
 
 	void FixedUpdate()
 	{
-		if(!lockMouseMovement) weapon.GetComponent<Weapon>().FixedWeaponUpdate();
+		if(!lockMouseMovement && weapon.GetComponent<Weapon>()) weapon.GetComponent<Weapon>().FixedWeaponUpdate();
 	}
 
 	public bool isMoving()
 	{
-		Vector3 displacement = transform.position - lastPos;
+		Vector3 disp = transform.position - lastPos;
 		lastPos = transform.position;
-		return displacement.magnitude > 0.001; // return true if char moved 1mm
+		return disp.magnitude > 0.001;
 	}
 }
