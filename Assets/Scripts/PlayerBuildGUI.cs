@@ -340,7 +340,6 @@ public class PlayerBuildGUI : MonoBehaviour
 		//build.transform.RotateAround(build.transform.position, new Vector3(0, 1, 0), rott);
 		rotInt = rott;
 		build.transform.rotation = Quaternion.Euler(build.transform.rotation.eulerAngles.x, build.transform.rotation.eulerAngles.y, rotInt * 45f);
-		Debug.Log (rotInt * 45f);
 	}
 
 	private bool isHovering()
